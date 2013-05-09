@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0">
+    <info organisation="com.example" module="android_ant_ivy"/>
+    <dependencies />
+</ivy-module>
