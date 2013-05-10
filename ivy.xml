@@ -3,12 +3,14 @@
     <info organisation="com.example" module="android_ant_ivy"/>
 
     <configurations defaultconfmapping="runtime->default;unit-test->runtime;">
-        <conf name="runtime" />
-        <conf name="unit-test" extends="runtime" />
+        <conf name="runtime"/>
+        <conf name="unit-test" extends="runtime"/>
     </configurations>
 
     <dependencies>
-      <dependency org="org.roboguice" name="roboguice" rev="2.0" />
-      <dependency org="org.robolectric" name="robolectric" rev="2.0-rc1" conf="unit-test" />
+        <dependency org="org.roboguice" name="roboguice" rev="2.0"/>
+
+        <dependency org="junit" name="junit" rev="4+" conf="unit-test"/>
+        <dependency org="org.robolectric" name="robolectric" rev="2.0-rc1" conf="unit-test"/>
     </dependencies>
 </ivy-module>
