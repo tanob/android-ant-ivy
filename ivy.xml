@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="2.0">
     <info organisation="com.example" module="android_ant_ivy"/>
-    <dependencies />
+
+    <configurations defaultconfmapping="runtime->default;unit-test->runtime;">
+        <conf name="runtime" />
+        <conf name="unit-test" extends="runtime" />
+    </configurations>
+
+    <dependencies>
+      <dependency org="org.roboguice" name="roboguice" rev="2.0" />
+      <dependency org="org.robolectric" name="robolectric" rev="2.0-rc1" conf="unit-test" />
+    </dependencies>
 </ivy-module>

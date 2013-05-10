@@ -113,6 +113,7 @@
     </target>
 
     <target name="retrieve" depends="init-ivy" description="--> retrieve dependencies with ivy">
-        <ivy:retrieve pattern="${jar.libs.dir}/[artifact](-[revision])(-[classifier]).[ext]" />
+        <ivy:retrieve pattern="${jar.libs.dir}/[conf]/[artifact](-[revision])(-[classifier]).[ext]" conf="unit-test" />
+        <ivy:retrieve pattern="${jar.libs.dir}/[artifact](-[revision])(-[classifier]).[ext]" conf="runtime" />
     </target>
 </project>
